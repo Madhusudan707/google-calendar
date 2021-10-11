@@ -1,11 +1,10 @@
-import { Grid,Header } from './Components/'
+import { Calendar } from './Components/'
 import './App.css'
 
 export const App = () => {
   return (
     <div className="App">
-      <Header/>
-      <Grid />
+      <Calendar/>
     </div>
   );
 }

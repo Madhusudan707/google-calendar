@@ -1,9 +1,9 @@
 import Button from '@mui/material/Button';
 
-export const Label = () => {
+export const Label = ({click}:any) => {
     return (
         <>
-            <Button variant="outlined">Today</Button>
+            <Button variant="outlined" onClick={click}>Today</Button>
         </>
     )
 }

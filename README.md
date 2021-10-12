@@ -35,6 +35,6 @@ Happy hacking!
 
 #### App Preview     
 
-![product](product.png)
+![product](preview.gif)
 
 

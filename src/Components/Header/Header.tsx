@@ -1,11 +1,11 @@
 import {Label,Month,NextPrev} from '../'
-import styles from './header.module.css'
-export const Header = ({click,prevClick,nextClick}:any) => {
+import './header.css'
+export const Header = ({click,prevClick,nextClick,monthWeek,selectMonth}:any) => {
     return (
-        <div className={styles.header}>
+        <div className="header">
             <Label click={click}/>
-            <Month/>
             <NextPrev prevDay={prevClick} nextDay={nextClick}/>
+            <Month week={monthWeek} selectMonth={selectMonth}/>
         </div>
     )
 }

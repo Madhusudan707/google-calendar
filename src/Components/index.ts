@@ -5,5 +5,5 @@ export { Month } from "./Month/Month";
 export { NextPrev } from "./NextPrev/NextPrev";
 export { Header } from "./Header/Header";
 export {WeekDays} from "./WeekDays/WeekDays"
-export {Days} from "./Days/Days"
 export {Event} from "./Event/Event"
+

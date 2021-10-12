@@ -1,0 +1,10 @@
+.nextprev {
+    display: flex;
+    gap: 10px;
+}
+
+.prev-btn,
+.next-btn {
+    font-size: 24px;
+    font-family: Roboto,sans-serif
+}

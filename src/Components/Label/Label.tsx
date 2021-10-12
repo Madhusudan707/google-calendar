@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 export const Label = ({click}:any) => {
     return (
         <>
-            <Button variant="outlined" onClick={click}>Today</Button>
+            <Button className="button" variant="outlined" onClick={click} style={{fontSize:"24px"}}>Today</Button>
         </>
     )
 }

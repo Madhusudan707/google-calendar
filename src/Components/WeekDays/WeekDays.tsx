@@ -1,11 +1,11 @@
 
-
+import './weekdays.css'
 export const WeekDays = ()=>{
-    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 return (
-    <div style={{ display: "flex", marginLeft: "50px" }}>
+    <div className="weekdays">
     {days.map((day) => {
-      return <div style={{ width: "100px", height: "50px" }}>{day}</div>;
+      return <div className="week-d">{day}</div>;
     })}
   </div>
 )

@@ -1,10 +1,10 @@
 import Button from '@mui/material/Button';
-import styles from './nextprev.module.css'
-export const NextPrev = ({prevDay,nextDay}:any) => {
+import './nextprev.css'
+export const NextPrev = ({ prevDay, nextDay }: any) => {
     return (
-        <div className={styles.nextprev}>
-             <Button variant="outlined" onClick={prevDay}>{"<"}</Button>
-             <Button variant="outlined" onClick={nextDay}>{">"}</Button>
+        <div className="nextprev">
+            <Button className="prev-btn" variant="outlined" onClick={prevDay} >{"<"}</Button>
+            <Button className="next-btn" variant="outlined" onClick={nextDay} >{">"}</Button>
         </div>
     )
 }

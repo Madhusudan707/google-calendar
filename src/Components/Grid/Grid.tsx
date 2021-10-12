@@ -1,64 +1,49 @@
-
-import { Cols } from './Cols'
 import { Event } from '../'
-import {useWeekGenerator} from '../../hooks'
+import { useWeekGenerator } from '../../hooks'
 import data from '../../data.json'
-import styles from './grid.module.css'
-
-
-
-export const Grid = () => {
+import './grid.css'
+export const Grid = ({ week }: any) => {
     const Data = data.events;
-    const {week,timeStatus} = useWeekGenerator() 
-    return (
-        // <div className={styles.grid}>
+    const { timeStatus } = useWeekGenerator();
 
-        //     <Cols/>
-        // </div>
-        <div style={{ display: "flex" }}>
-            <div style={{ marginTop: "50px" }}>
+    return (
+        <div className="grid">
+            <div className="grid-row" style={{}}>
                 {Array(24)
                     .fill(0)
-                    .map((item, index) => {
+                    .map((_, index) => {
+                        const PM = `${index === 12 ? 12 : index - 12} PM`
+                        const AM = `${index === 0 ? 12 : index} AM`
                         return (
-                            <div
-                                style={{
-                                    width: "50px",
-                                    height: "50px",
-                                    background: "lightblue",
-                                    display: "flex",
-                                    border: "1px solid black",
-                                    alignItems: "center"
-                                }}
-                            >
-                                {index >= 12
-                                    ? `${index === 12 ? `12` : index - 12} PM`
-                                    : `${index === 0 ? `12` : index} AM`}
-                            </div>
+                            <div className="grid-time" >  {index >= 12 ? PM : AM} </div>
                         );
                     })}
             </div>
-            console.log(week)
-            {week.map((day:any) => {
-               
+
+            {week.map((day: any) => {
+                const monthDay = new Date(day)
+                const currentDate = new Date()
+                const currentDay = currentDate.getDate()
+                const currentMonth = currentDate.getMonth() + 1
+                const currentYear = currentDate.getFullYear()
+                const dayArr = day.split("/")
+                
+
+                const isCurrentDate = () => {
+                    return (Number(dayArr[2]) === currentYear && Number(dayArr[1]) === currentDay && Number(dayArr[0]) === currentMonth)
+                }
                 return (
-                    <div style={{ display: "flex", flexFlow: "column", color: "red" }}>
-                        <div style={{ width: "100px", height: "50px" }}>{day}</div>
+                    <div className="grid-week">
+                        <div className="grid-day" >
+                            <span className={`${isCurrentDate() && "currentDateStyle"} grid-current-day`} >{monthDay.getDate()}</span></div>
                         {Array(24)
                             .fill(0)
                             .map((item, index) => {
                                 return (
-                                    <div
-                                        style={{
-                                            width: "100px",
-                                            height: "50px",
-                                            border: "1px solid black"
-                                        }}
-                                    >
-                                        {Data.filter((item1) => {
-                                            // console.log(new Date(item1.date),new Date(day))
+                                    <div className="grid-cell">
+                                        {Data.filter((event) => {
                                             return (
-                                                item1.date === day && timeStatus(item1.time) === index
+                                                event.date === day && timeStatus(event.time) === index
                                             );
                                         }).map((events) => {
                                             return <Event event={events.event} />;

@@ -1,0 +1,12 @@
+.weekdays {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    font-size: 20px
+}
+
+.week-d {
+    width: 100px;
+    height: 50px
+}

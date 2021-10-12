@@ -1,0 +1,54 @@
+.grid {
+    display: flex;
+}
+
+.grid-row {
+    margin-top: 50px
+}
+
+.grid-time {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border: 1px solid gray;
+    align-items: center;
+    justify-content: center
+}
+
+.grid-week {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-day {
+    font-size: 24px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center
+}
+
+.grid-current-day{
+    margin-left: 15%;
+   
+}
+.grid-cell{
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 50px;
+    border: 1px solid gray;
+}
+.currentDateStyle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -10% 0 0 0;
+    color: white;
+    font-weight: bolder;
+    background: #1967D2;
+    border-radius: 50%;
+}

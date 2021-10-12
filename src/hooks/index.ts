@@ -1,0 +1,1 @@
+export {useWeekGenerator} from './useWeekGenerator'

@@ -2,8 +2,8 @@
   "events": [
     { "id": 1, "time": "16:59", "date": "10/09/2021", "event": "Mita" },
     { "id": 2, "time": "3:18", "date": "10/12/2021", "event": "Eamia" },
-    { "id": 3, "time": "4:45", "date": "10/01/2021", "event": "Skyble" }
-    { "id": 4, "time": "10:45", "date": "10/23/2021", "event": "Maddy" }
+    { "id": 3, "time": "4:45", "date": "10/01/2021", "event": "Skyble" },
+    { "id": 4, "time": "10:45", "date": "10/23/2021", "event": "Maddy" },
     { "id": 5, "time": "11:45", "date": "10/26/2021", "event": "Last9" }
   ]
 }

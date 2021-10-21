@@ -44,16 +44,16 @@ export const useWeekGenerator = () => {
       }
     }
     prevDates(weekInf.prev);
-    arr.push(
-      `${currentDate.getMonth() + 1
-      }/${currentDate.getDate()}/${currentDate.getFullYear()}`
+  arr.push(
+      `${currentDate.getMonth() + 1 > 9 ? currentDate.getMonth() + 1 : `0${currentDate.getMonth() + 1}`
+      }/${currentDate.getDate() > 9 ? currentDate.getDate() : `0${currentDate.getDate()}`}/${currentDate.getFullYear()}`
     );
     function nextDates(nextNo: any) {
       let next = new Date(currentDate);
       while (nextNo !== 0) {
         let next1 = new Date(next.setDate(next.getDate() + 1));
         arr.push(
-          `${next1.getMonth() + 1}/${next1.getDate()}/${next1.getFullYear()}`
+          `${next1.getMonth() + 1 > 9 ? next1.getMonth() + 1 : `0${next1.getMonth() + 1}`}/${next1.getDate() > 9 ? next1.getDate() : `0${next1.getDate()}`}/${next1.getFullYear()}`
         );
         nextNo--;
       }
